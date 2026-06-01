@@ -1,248 +1,102 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GATHERING the MAGIC of Collection</title>
-    <style>
-        /* ==========================================
-           1. GLOBAL STYLES & BACKGROUND
-           ========================================== */
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: linear-gradient(135deg, #11151c 0%, #1e2530 100%);
-            color: #e0e6ed;
-            margin: 0;
-            padding: 0;
-            line-height: 1.6;
-        }
+/* ==========================================================================
+   1. GLOBAL STYLES (Background & Fonts)
+   ========================================================================== */
+body {
+    font-family: Arial, Helvetica, sans-serif; /* Readable, web-safe typography */
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%); /* Elegant gradient background */
+    color: #333333;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
 
-        /* ==========================================
-           2. HEADER
-           ========================================== */
-        header {
-            text-align: center;
-            background-color: #0b0c10;
-            padding: 40px 20px;
-            border-bottom: 3px solid #61dafb; /* Magic-inspired neon accent */
-        }
+/* ==========================================================================
+   2. HEADER STYLES
+   ========================================================================== */
+header {
+    background-color: #2c3e50; /* Dark contrast color block */
+    color: #ffffff;
+    text-align: center; /* Centered text alignment */
+    padding: 40px 20px; /* Spacing padding */
+}
 
-        header h1 {
-            font-size: 2.5rem;
-            font-weight: 700;
-            color: #ffffff;
-            margin: 0 0 10px 0;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            text-shadow: 0 2px 4px rgba(0,0,0,0.5);
-        }
+header h1 {
+    margin: 0;
+    font-size: 2.5rem;
+    font-weight: 700;
+}
 
-        header p {
-            font-size: 1.1rem;
-            color: #8f9cae;
-            margin: 0;
-        }
+header p {
+    margin: 10px 0 0 0;
+    font-size: 1.1rem;
+    opacity: 0.9;
+}
 
-        /* ==========================================
-           3. MAIN CONTENT & SECTIONS
-           ========================================== */
-        main {
-            max-width: 1000px;
-            margin: 40px auto;
-            padding: 0 20px;
-        }
+/* ==========================================================================
+   3. NAVIGATION MENU STYLES
+   ========================================================================== */
+nav {
+    background-color: #34495e; /* Contrasting background */
+    padding: 0;
+}
 
-        #card-list {
-            background-color: #1b2028;
-            padding: 30px;
-            margin-bottom: 30px;
-            border-radius: 8px;
-            border: 1px solid #2c3545;
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
-        }
+nav ul {
+    list-style-type: none; /* Removes bullet points */
+    margin: 0;
+    padding: 0;
+    display: flex; /* Displays items horizontally */
+    justify-content: center;
+}
 
-        #card-list h2 {
-            color: #ffffff;
-            font-size: 1.8rem;
-            border-bottom: 2px solid #2c3545;
-            padding-bottom: 10px;
-            margin-top: 0;
-        }
+nav ul li a {
+    display: block;
+    color: #ffffff;
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none; /* Removes link underlines */
+    font-weight: bold;
+    transition: background-color 0.3s ease; /* Smooth hover transition effect */
+}
 
-        /* ==========================================
-           4. NAVIGATION / HORIZONTAL CARD TYPES
-           ========================================== */
-        /* Targets the main categories (Creatures, Enchantments, etc.) to look like a menu grid */
-        #card-list > ul {
-            list-style-type: none;
-            padding: 0;
-            margin: 20px 0 0 0;
-            display: flex;
-            flex-wrap: wrap;
-            gap: 20px;
-        }
+/* Navigation Hover Effect */
+nav ul li a:hover {
+    background-color: #1abc9c; /* Vivid hover color change */
+    color: #ffffff;
+}
 
-        #card-list > ul > li {
-            background-color: #242b35;
-            flex: 1 1 calc(33.333% - 20px); /* 3 columns on desktop views */
-            min-width: 250px;
-            padding: 20px;
-            border-radius: 6px;
-            border-top: 4px solid #61dafb; /* Top accent border */
-            box-shadow: 0 4px 6px rgba(0,0,0,0.15);
-            transition: transform 0.2s ease, background-color 0.2s ease;
-            font-weight: bold;
-            color: #ffffff;
-        }
+/* ==========================================================================
+   4. MAIN SECTIONS STYLES
+   ========================================================================== */
+main {
+    max-width: 900px;
+    margin: 30px auto; /* Centers layout container on screen */
+    padding: 0 20px;
+}
 
-        /* Hover effect for the card type blocks */
-        #card-list > ul > li:hover {
-            transform: translateY(-5px);
-            background-color: #2c3543;
-        }
+section {
+    background-color: #ffffff; /* White card layout to separate content */
+    margin-bottom: 25px; /* Margin spacing between sections */
+    padding: 25px; /* Internal content padding */
+    border-radius: 6px;
+    border: 1px solid #e0e0e0; /* Visual boundary border */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05); /* Soft drop shadow */
+}
 
-        /* ==========================================
-           5. NESTED COLOR & CARD LISTS
-           ========================================== */
-        /* Sub-lists for Colors (Blue, Red, Green, etc.) */
-        #card-list ul ul {
-            list-style-type: none;
-            padding-left: 0;
-            margin-top: 10px;
-        }
+section h2 {
+    color: #2c3e50;
+    margin-top: 0;
+    border-bottom: 2px solid #1abc9c; /* Content divider line */
+    padding-bottom: 8px;
+}
 
-        #card-list ul ul li {
-            font-weight: 600;
-            color: #61dafb; /* Mana color highlight text */
-            margin-top: 10px;
-        }
-
-        /* Actual individual Card Names */
-        #card-list ul ul ul {
-            padding-left: 15px;
-            border-left: 2px solid #3d495c;
-            margin-top: 5px;
-        }
-
-        #card-list ul ul ul li {
-            font-weight: normal;
-            color: #a0aec0;
-            font-size: 0.95rem;
-            margin-bottom: 4px;
-        }
-
-        /* ==========================================
-           6. FOOTER
-           ========================================== */
-        footer {
-            text-align: center;
-            font-size: 0.85rem;
-            padding: 20px;
-            background-color: #0b0c10;
-            color: #8f9cae;
-            border-top: 1px solid #1e2530;
-            margin-top: 60px;
-        }
-    </style>
-</head>
-<body>
-    <header>
-        <h1>GATHERING the MAGIC of Collection</h1>
-        <p>A collection of my favorite magic the gathering cards organized by type and color.</p>
-    </header>
-    <main>
-        <section id="card-list">
-            <h2>My Cards</h2>
-            <ul>
-                <li>Creatures
-                    <ul>
-                        <li>Blue
-                            <ul>
-                                <li>Card Name 1 - Set</li>
-                                <li>Card Name 2 - Set</li>
-                            </ul>
-                        </li>
-                        <li>Red
-                            <ul>
-                                <li>Card Name 3 - Set</li>
-                            </ul>
-                        </li>
-                        <li>Green
-                            <ul>
-                                <li>Card Name 4 - Set</li>
-                            </ul>
-                        </li>
-                        <li>White
-                            <ul>
-                                <li>Card Name 5 - Set</li>
-                            </ul>
-                        </li>
-                        <li>Black
-                            <ul>
-                                <li>Card Name 6 - Set</li>
-                            </ul>
-                        </li>
-                    </ul>
-                </li>
-                <li>Enchantments
-                    <ul>
-                        <li>Blue
-                            <ul>
-                                <li>Card Name 7 - Set</li>
-                            </ul>
-                        </li>
-                        </ul>
-                </li>
-                <li>Instants
-                    <ul>
-                        <li>Black
-                            <ul>
-                                <li>Card Name 8 - Set</li>
-                            </ul>
-                        </li>
-                    </ul>
-                </li>
-                <li>Sorceries
-                    <ul>
-                        <li>Green
-                            <ul>
-                                <li>Card Name 9 - Set</li>
-                            </ul>
-                        </li>
-                    </ul>
-                </li>
-                <li>Artifacts
-                    <ul>
-                        <li>Colorless
-                            <ul>
-                                <li>Card Name 10 - Set</li>
-                            </ul>
-                        </li>
-                    </ul>
-                </li>
-                <li>Land
-                    <ul>
-                        <li>Basic Lands
-                            <ul>
-                                <li>Card Name 11 - Set</li>
-                            </ul>
-                        </li>
-                    </ul>
-                </li>
-                <li>Tokens
-                    <ul>
-                        <li>Token Type
-                            <ul>
-                                <li>Card Name 12 - Set</li>
-                            </ul>
-                        </li>
-                    </ul>
-                </li>
-            </ul>
-        </section>
-    </main>
-    <footer>
-        Have Fun
-    </footer>
-</body>
-</html>
+/* ==========================================================================
+   5. FOOTER STYLES
+   ========================================================================== */
+footer {
+    background-color: #2c3e50; /* Matches header theme colors */
+    color: #ffffff;
+    text-align: center; /* Centered layout text */
+    padding: 15px 20px;
+    font-size: 0.85rem; /* Noticeably smaller font size */
+    margin-top: 50px;
+}
