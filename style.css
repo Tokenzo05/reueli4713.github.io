@@ -37,18 +37,18 @@ header p {
 }
 
 /* ==========================================================================
-   3. NAVIGATION MENU STYLES (New Layout Addition)
+   3. NAVIGATION MENU & TRANSITIONS
    ========================================================================== */
 nav {
-    background-color: #11151c;
+    background-color: #0b0c10;
     border-bottom: 1px solid #2c3545;
 }
 
 nav ul {
-    list-style-type: none; /* Removes default bullet points */
+    list-style-type: none;
     margin: 0;
     padding: 0;
-    display: flex; /* Displays items horizontally */
+    display: flex;
     justify-content: center;
 }
 
@@ -62,17 +62,18 @@ nav ul li a {
     text-transform: uppercase;
     font-size: 0.9rem;
     letter-spacing: 1px;
-    transition: all 0.3s ease; /* Smooth hover transition */
+    /* REQUIRED: Smooth transition for menu background color changes */
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-/* Navigation Link Hover Effects */
+/* Navigation Hover Effect */
 nav ul li a:hover {
     background-color: #1b2028;
-    color: #61dafb; /* Highlight color match */
+    color: #61dafb;
 }
 
 /* ==========================================================================
-   4. MAIN CONTENT & SECTIONS
+   4. MAIN CONTENT & SECTION HOVER ZOOM
    ========================================================================== */
 main {
     max-width: 1000px;
@@ -87,6 +88,14 @@ section {
     border-radius: 8px;
     border: 1px solid #2c3545;
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+    /* REQUIRED: Setup transition layer for smooth card zoom interactive event */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* REQUIRED: Zoom in effect applied to each section during a hover event */
+section:hover {
+    transform: scale(1.02);
+    box-shadow: 0 15px 35px rgba(97, 218, 251, 0.15); /* Adds a subtle neon glow aura */
 }
 
 section h2 {
@@ -97,7 +106,7 @@ section h2 {
     margin-top: 0;
 }
 
-/* Grid layout for inner lists */
+/* Grid layout for inner collection list items */
 #card-list > ul {
     list-style-type: none;
     padding: 0;
@@ -109,7 +118,7 @@ section h2 {
 
 #card-list > ul > li {
     background-color: #242b35;
-    flex: 1 1 calc(33.333% - 20px);
+    flex: 1 1 calc(33.333% - 20px); 
     min-width: 250px;
     padding: 20px;
     border-radius: 6px;
@@ -154,17 +163,64 @@ section h2 {
 }
 
 /* ==========================================================================
-   6. FOOTER
+   6. REQUIRED TABLE STYLING
+   ========================================================================== */
+table {
+    width: 100%; /* Spans the full width of section parent */
+    border-collapse: collapse; /* Merges adjacent cell borders cleanly */
+    margin: 20px 0;
+    background-color: #161a22;
+}
+
+caption {
+    font-weight: bold;
+    font-size: 1.1rem;
+    margin-bottom: 12px;
+    color: #ffffff;
+    text-align: left;
+    letter-spacing: 0.5px;
+}
+
+/* Cell borders and internal layout padding */
+th, td {
+    border: 1px solid #2c3545;
+    padding: 14px 18px;
+    text-align: left;
+    vertical-align: top;
+}
+
+/* Header row specific color properties */
+thead th {
+    background-color: #0b0c10;
+    color: #61dafb;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    letter-spacing: 1px;
+}
+
+/* Footer row specific background block formatting */
+tfoot td {
+    font-weight: bold;
+    background-color: #0b0c10;
+    color: #8f9cae;
+    font-style: italic;
+}
+
+/* Background highlights for specific column configurations (1st and 3rd) */
+.table-column-highlight {
+    background-color: rgba(97, 218, 251, 0.03);
+}
+
+/* ==========================================================================
+   7. FOOTER
    ========================================================================== */
 footer {
     text-align: center;
-    font-size: 0.8rem; /* Scaled down smaller font size */
-    padding: 25px;
-    background-color: #0b0c10; /* Contrasting background block */
+    font-size: 0.85rem;
+    padding: 20px;
+    background-color: #0b0c10;
     color: #8f9cae;
     border-top: 1px solid #1e2530;
     margin-top: 60px;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-}
 }
