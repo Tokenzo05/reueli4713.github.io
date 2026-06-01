@@ -4,28 +4,29 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GATHERING the MAGIC of Collection</title>
-    <!-- CRITICAL FIX: Link to the external styles.css file -->
+    <!-- Link to external stylesheet -->
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-    <!-- Header Block -->
+    <!-- Header Section -->
     <header>
         <h1>GATHERING the MAGIC of Collection</h1>
         <p>A collection of my favorite Magic: The Gathering cards organized by type and color.</p>
     </header>
 
-    <!-- CRITICAL FIX: Adding a real horizontal Navigation Bar to fulfill the rubric -->
+    <!-- Navigation Menu (Required for transition effects) -->
     <nav>
         <ul>
             <li><a href="#card-list">My Collection</a></li>
-            <li><a href="#stats">Deck Insights</a></li>
-            <li><a href="#contact">Contact</a></li>
+            <li><a href="#projects">Featured Decks</a></li>
         </ul>
     </nav>
 
-    <!-- Main Content Content -->
+    <!-- Main Layout Container -->
     <main>
+
+        <!-- Existing Card List Section -->
         <section id="card-list">
             <h2>My Cards</h2>
             <ul>
@@ -115,9 +116,58 @@
                 </li>
             </ul>
         </section>
+
+        <!-- NEW: Projects Section with Complete Structural Table -->
+        <section id="projects">
+            <h2>Featured Build Projects</h2>
+            <p>A structured breakdown of top-tier optimized tactical builds currently undergoing playtesting.</p>
+            
+            <table>
+                <!-- Table Title Caption -->
+                <caption>MTG Commander Archetype Overview</caption>
+                
+                <!-- Column Groups (Applies bg color to 1st and 3rd columns) -->
+                <colgroup>
+                    <col class="table-column-highlight"> <!-- 1st Column -->
+                    <col>                                <!-- 2nd Column -->
+                    <col class="table-column-highlight"> <!-- 3rd Column -->
+                </colgroup>
+                
+                <!-- Table Header Group -->
+                <thead>
+                    <tr>
+                        <th>Project / Deck Name</th>
+                        <th>Strategy Description</th>
+                        <th>Visual Layout Placeholder</th>
+                    </tr>
+                </thead>
+                
+                <!-- Table Body Group (2 Sample Projects) -->
+                <tbody>
+                    <tr>
+                        <td><strong>The Infamous Cruelclaw</strong></td>
+                        <td>A high-speed Rakdos deck leveraging top-deck manipulation, aggressive combat triggers, and instant-speed infinite combo lines.</td>
+                        <td>[Image Placeholder: Cruelclaw Decklist]</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Golgari Reanimator Layout</strong></td>
+                        <td>A graveyard-reliant midrange deck focused on resource utilization, dredge pacing mechanics, and massive end-game creature resurrection.</td>
+                        <td>[Image Placeholder: Battlefield Layout]</td>
+                    </tr>
+                </tbody>
+                
+                <!-- Table Footer Group -->
+                <tfoot>
+                    <tr>
+                        <td colspan="3">Active Projects Monitored: 2 Core Builds</td>
+                    </tr>
+                </tfoot>
+            </table>
+        </section>
+
     </main>
 
-    <!-- Footer Block -->
+    <!-- Footer Section -->
     <footer>
         <p>&copy; 2026 Reuben Elie. Have Fun & Play On.</p>
     </footer>
