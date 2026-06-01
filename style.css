@@ -1,47 +1,51 @@
 /* ==========================================================================
-   1. GLOBAL STYLES (Background & Fonts)
+   1. GLOBAL STYLES & BACKGROUND
    ========================================================================== */
 body {
-    font-family: Arial, Helvetica, sans-serif; /* Readable, web-safe typography */
-    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%); /* Elegant gradient background */
-    color: #333333;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #11151c 0%, #1e2530 100%);
+    color: #e0e6ed;
     margin: 0;
     padding: 0;
     line-height: 1.6;
 }
 
 /* ==========================================================================
-   2. HEADER STYLES
+   2. HEADER
    ========================================================================== */
 header {
-    background-color: #2c3e50; /* Dark contrast color block */
-    color: #ffffff;
-    text-align: center; /* Centered text alignment */
-    padding: 40px 20px; /* Spacing padding */
+    text-align: center;
+    background-color: #0b0c10;
+    padding: 40px 20px;
+    border-bottom: 3px solid #61dafb; /* Magic-inspired neon accent */
 }
 
 header h1 {
-    margin: 0;
     font-size: 2.5rem;
     font-weight: 700;
+    color: #ffffff;
+    margin: 0 0 10px 0;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.5);
 }
 
 header p {
-    margin: 10px 0 0 0;
     font-size: 1.1rem;
-    opacity: 0.9;
+    color: #8f9cae;
+    margin: 0;
 }
 
 /* ==========================================================================
-   3. NAVIGATION MENU STYLES
+   3. NAVIGATION MENU STYLES (New Layout Addition)
    ========================================================================== */
 nav {
-    background-color: #34495e; /* Contrasting background */
-    padding: 0;
+    background-color: #11151c;
+    border-bottom: 1px solid #2c3545;
 }
 
 nav ul {
-    list-style-type: none; /* Removes bullet points */
+    list-style-type: none; /* Removes default bullet points */
     margin: 0;
     padding: 0;
     display: flex; /* Displays items horizontally */
@@ -50,53 +54,117 @@ nav ul {
 
 nav ul li a {
     display: block;
-    color: #ffffff;
+    color: #8f9cae;
     text-align: center;
-    padding: 14px 20px;
-    text-decoration: none; /* Removes link underlines */
+    padding: 14px 25px;
+    text-decoration: none;
     font-weight: bold;
-    transition: background-color 0.3s ease; /* Smooth hover transition effect */
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+    transition: all 0.3s ease; /* Smooth hover transition */
 }
 
-/* Navigation Hover Effect */
+/* Navigation Link Hover Effects */
 nav ul li a:hover {
-    background-color: #1abc9c; /* Vivid hover color change */
-    color: #ffffff;
+    background-color: #1b2028;
+    color: #61dafb; /* Highlight color match */
 }
 
 /* ==========================================================================
-   4. MAIN SECTIONS STYLES
+   4. MAIN CONTENT & SECTIONS
    ========================================================================== */
 main {
-    max-width: 900px;
-    margin: 30px auto; /* Centers layout container on screen */
+    max-width: 1000px;
+    margin: 40px auto;
     padding: 0 20px;
 }
 
 section {
-    background-color: #ffffff; /* White card layout to separate content */
-    margin-bottom: 25px; /* Margin spacing between sections */
-    padding: 25px; /* Internal content padding */
-    border-radius: 6px;
-    border: 1px solid #e0e0e0; /* Visual boundary border */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05); /* Soft drop shadow */
+    background-color: #1b2028;
+    padding: 30px;
+    margin-bottom: 30px;
+    border-radius: 8px;
+    border: 1px solid #2c3545;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
 }
 
 section h2 {
-    color: #2c3e50;
+    color: #ffffff;
+    font-size: 1.8rem;
+    border-bottom: 2px solid #2c3545;
+    padding-bottom: 10px;
     margin-top: 0;
-    border-bottom: 2px solid #1abc9c; /* Content divider line */
-    padding-bottom: 8px;
+}
+
+/* Grid layout for inner lists */
+#card-list > ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 20px 0 0 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+#card-list > ul > li {
+    background-color: #242b35;
+    flex: 1 1 calc(33.333% - 20px);
+    min-width: 250px;
+    padding: 20px;
+    border-radius: 6px;
+    border-top: 4px solid #61dafb;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.15);
+    transition: transform 0.2s ease, background-color 0.2s ease;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+#card-list > ul > li:hover {
+    transform: translateY(-5px);
+    background-color: #2c3543;
 }
 
 /* ==========================================================================
-   5. FOOTER STYLES
+   5. NESTED COLOR & CARD LISTS
+   ========================================================================== */
+#card-list ul ul {
+    list-style-type: none;
+    padding-left: 0;
+    margin-top: 10px;
+}
+
+#card-list ul ul li {
+    font-weight: 600;
+    color: #61dafb;
+    margin-top: 10px;
+}
+
+#card-list ul ul ul {
+    padding-left: 15px;
+    border-left: 2px solid #3d495c;
+    margin-top: 5px;
+}
+
+#card-list ul ul ul li {
+    font-weight: normal;
+    color: #a0aec0;
+    font-size: 0.95rem;
+    margin-bottom: 4px;
+}
+
+/* ==========================================================================
+   6. FOOTER
    ========================================================================== */
 footer {
-    background-color: #2c3e50; /* Matches header theme colors */
-    color: #ffffff;
-    text-align: center; /* Centered layout text */
-    padding: 15px 20px;
-    font-size: 0.85rem; /* Noticeably smaller font size */
-    margin-top: 50px;
+    text-align: center;
+    font-size: 0.8rem; /* Scaled down smaller font size */
+    padding: 25px;
+    background-color: #0b0c10; /* Contrasting background block */
+    color: #8f9cae;
+    border-top: 1px solid #1e2530;
+    margin-top: 60px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
 }
