@@ -1,143 +1,60 @@
-/* ==========================================================================
-   Base & Layout Components (Mobile-First)
-   ========================================================================== */
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Storefront</title>
+    <!-- This line connects your HTML to your stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
-/* Navigational Menu Flexbox */
-header nav ul.nav-menu {
-    display: flex;
-    flex-direction: row;
-    gap: 15px;
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
+    <!-- Header Section -->
+    <header>
+        <h1>Welcome to My Shop</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="storefront.html" class="active">Shop</a></li>
+            </ul>
+        </nav>
+    </header>
 
-/* Main Content Area Flexbox */
-.main-content {
-    display: flex;
-    flex-direction: column;
-    gap: 40px;
-    padding: 20px;
-    max-width: 1200px;
-    margin: 0 auto;
-}
+    <!-- Main Storefront Content -->
+    <main>
+        <h2>Featured Products</h2>
+        
+        <div class="product-grid">
+            <!-- Product 1 -->
+            <div class="product-card">
+                <img src="https://via.placeholder.com/200" alt="Product 1">
+                <h3>Cool Item Alpha</h3>
+                <p class="price">$19.99</p>
+                <button class="buy-btn">Add to Cart</button>
+            </div>
 
-/* Contact Form Container Flexbox */
-.contact-form {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    width: 100%;
-    max-width: 500px;
-    margin: 0 auto;
-}
+            <!-- Product 2 -->
+            <div class="product-card">
+                <img src="https://via.placeholder.com/200" alt="Product 2">
+                <h3>Awesome Item Beta</h3>
+                <p class="price">$29.99</p>
+                <button class="buy-btn">Add to Cart</button>
+            </div>
 
-/* Individual Form Group Layout */
-.form-group {
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-}
+            <!-- Product 3 -->
+            <div class="product-card">
+                <img src="https://via.placeholder.com/200" alt="Product 3">
+                <h3>Premium Item Gamma</h3>
+                <p class="price">$49.99</p>
+                <button class="buy-btn">Add to Cart</button>
+            </div>
+        </div>
+    </main>
 
-/* ==========================================================================
-   Form Styling & Interactivity
-   ========================================================================== */
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2026 My GitHub Storefront. All rights reserved.</p>
+    </footer>
 
-/* Input and Textarea Fields */
-.contact-form input[type="text"],
-.contact-form input[type="email"],
-.contact-form textarea {
-    width: 100%;
-    padding: 10px;
-    border: 2px solid #ccc;
-    border-radius: 4px;
-    font-size: 1rem;
-    box-sizing: border-box;
-    /* Smooth interaction transition */
-    transition: border-color 0.3s ease;
-}
-
-/* Interactive Hover and Focus Effects for Inputs */
-.contact-form input[type="text"]:hover,
-.contact-form input[type="email"]:hover,
-.contact-form textarea:hover {
-    border-color: #888;
-}
-
-.contact-form input[type="text"]:focus,
-.contact-form input[type="email"]:focus,
-.contact-form textarea:focus {
-    border-color: #0056b3;
-    outline: none;
-}
-
-/* Submit Button Base Styling */
-.submit-btn {
-    padding: 12px 20px;
-    background-color: #007bff;
-    color: #fff;
-    border: none;
-    border-radius: 4px;
-    font-size: 1rem;
-    cursor: pointer;
-    font-weight: bold;
-    /* Smooth background color transition */
-    transition: background-color 0.3s ease;
-}
-
-/* Interactive Hover and Focus Effects for Button */
-.submit-btn:hover,
-.submit-btn:focus {
-    background-color: #0056b3;
-    outline: none;
-}
-
-
-/* ==========================================================================
-   Responsive Design (Media Queries)
-   ========================================================================== */
-
-/* Phone Display (Base layout is already mobile-first)
-   Minimum mobile breakpoints typically handle screens up to 480px
-*/
-@media min-width: 320px) {
-    /* Mobile-specific structural tweaks can go here if needed */
-}
-
-/* Tablet Display (Min-width: 768px) */
-@media (min-width: 768px) {
-    header {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 15px 30px;
-    }
-
-    /* Adjust main content items to give more spacing on tablets */
-    .main-content {
-        gap: 50px;
-        padding: 30px;
-    }
-}
-
-/* Desktop Display (Min-width: 1024px) */
-@media (min-width: 1024px) {
-    /* Shifts layout to multi-column display options on large monitors */
-    .main-content {
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: flex-start;
-        gap: 60px;
-    }
-
-    .hero-intro {
-        flex: 1;
-    }
-
-    .contact-section {
-        flex: 1;
-        background-color: #f9f9f9;
-        padding: 25px;
-        border-radius: 8px;
-    }
-}
+</body>
+</html>
