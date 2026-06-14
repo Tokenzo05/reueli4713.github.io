@@ -1,3 +1,269 @@
+/* Universal Resets */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #f4f7f6;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Header & Navigation */
+header {
+    background-color: #2c3e50;
+    color: white;
+    padding: 1.5rem;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    margin-top: 1rem;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #00bcd4;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav ul li a.active {
+    color: #ffffff;
+    border-bottom: 2px solid #ffffff;
+}
+
+/* Main Content Area */
+main {
+    max-width: 1100px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+    flex: 1;
+}
+
+main h2 {
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+/* The Product Grid Display */
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+/* Individual Product Cards */
+.product-card {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.2s;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+}
+
+.product-card img {
+    max-width: 100%;
+    border-radius: 4px;
+    margin-bottom: 1rem;
+}
+
+.product-card h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+}
+
+.product-card .price {
+    color: #e74c3c;
+    font-weight: bold;
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+}
+
+/* Call to Action Buttons */
+.buy-btn {
+    background-color: #2ecc71;
+    color: white;
+    border: none;
+    padding: 0.6rem 1.2rem;
+    font-size: 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+    font-weight: bold;
+}
+
+.buy-btn:hover {
+    background-color: #27ae60;
+}
+
+/* Footer styling */
+footer {
+    background-color: #2c3e50;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    margin-top: auto;
+}
+
+/* ==========================================================================
+   Base & Layout Components (Mobile-First)
+   ========================================================================== */
+
+/* Navigational Menu Flexbox */
+header nav ul.nav-menu {
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* Main Content Area Flexbox */
+.main-content {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Contact Form Container Flexbox */
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+/* Individual Form Group Layout */
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+/* ==========================================================================
+   Form Styling & Interactivity
+   ========================================================================== */
+
+/* Input and Textarea Fields */
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+    box-sizing: border-box;
+    /* Smooth interaction transition */
+    transition: border-color 0.3s ease;
+}
+
+/* Interactive Hover and Focus Effects for Inputs */
+.contact-form input[type="text"]:hover,
+.contact-form input[type="email"]:hover,
+.contact-form textarea:hover {
+    border-color: #888;
+}
+
+.contact-form input[type="text"]:focus,
+.contact-form input[type="email"]:focus,
+.contact-form textarea:focus {
+    border-color: #0056b3;
+    outline: none;
+}
+
+/* Submit Button Base Styling */
+.submit-btn {
+    padding: 12px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    cursor: pointer;
+    font-weight: bold;
+    /* Smooth background color transition */
+    transition: background-color 0.3s ease;
+}
+
+/* Interactive Hover and Focus Effects for Button */
+.submit-btn:hover,
+.submit-btn:focus {
+    background-color: #0056b3;
+    outline: none;
+}
+
+
+/* ==========================================================================
+   Responsive Design (Media Queries)
+   ========================================================================== */
+
+/* Phone Display (Base layout is already mobile-first)
+   Minimum mobile breakpoints typically handle screens up to 480px
+*/
+@media min-width: 320px) {
+    /* Mobile-specific structural tweaks can go here if needed */
+}
+
+/* Tablet Display (Min-width: 768px) */
+@media (min-width: 768px) {
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 15px 30px;
+    }
+
+    /* Adjust main content items to give more spacing on tablets */
+    .main-content {
+        gap: 50px;
+        padding: 30px;
+    }
+}
+
+/* Desktop Display (Min-width: 1024px) */
+@media (min-width: 1024px) {
+    /* Shifts layout to multi-column display options on large monitors */
+    .main-content {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-start;
+        gap: 60px;
+    }
+
+    .hero-intro {
+        flex: 1;
+    }
+
+    .contact-section {
+        flex: 1;
+        background-color: #f9f9f9;
+        padding: 25px;
+        border-radius: 8px;
+    }
+}
 /* ==========================================================================
    Base Styles & Reset
    ========================================================================== */
